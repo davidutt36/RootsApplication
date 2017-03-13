@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  01
+//  02
 //
 //  Created by David Utt on 3/13/17.
 //  Copyright © 2017 David Utt. All rights reserved.
@@ -34,7 +34,26 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             
             //facets
             imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
+            imagePicker.cameraCaptureMode = .photo
+            imagePicker.modalPresentationStyle = .fullScreen
+            
+            
+            //custom view stuff
+            let customViewController = CustomOverlayViewController(
+                nibName:"CustomOverlayViewController",
+                bundle: nil
+            )
+            let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
+            customView.frame = imagePicker.view.frame
+            
+            //present the camera
+            self.present(imagePicker, animated: true, completion: {imagePicker.cameraOverlayView = customView})
+            
+//            present(imagePicker,animated: true, completion: {
+//                imagePicker.cameraOverlayView = customView
+//                }
+//            )
+            
             
             //start Timer
             StartTime()

@@ -12,6 +12,9 @@
 		17B087AD1E6DC26F0007F568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B087AC1E6DC26F0007F568 /* Assets.xcassets */; };
 		17B087B01E6DC26F0007F568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B087AE1E6DC26F0007F568 /* LaunchScreen.storyboard */; };
 		17C0BAA51E7703FD0013EDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BAA31E7703FD0013EDBF /* ViewController.swift */; };
+		17C0BAA91E7719B40013EDBF /* CustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BAA71E7719B40013EDBF /* CustomOverlayViewController.swift */; };
+		17C0BAAA1E7719B40013EDBF /* CustomOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C0BAA81E7719B40013EDBF /* CustomOverlayViewController.xib */; };
+		17C0BAAC1E7719D50013EDBF /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BAAB1E7719D50013EDBF /* CustomOverlayView.swift */; };
 		17EB75031E71CEE80052CA93 /* memoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB75021E71CEE80052CA93 /* memoryData.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		17B087AF1E6DC26F0007F568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17B087B11E6DC26F0007F568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C0BAA31E7703FD0013EDBF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17C0BAA71E7719B40013EDBF /* CustomOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayViewController.swift; sourceTree = "<group>"; };
+		17C0BAA81E7719B40013EDBF /* CustomOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayViewController.xib; sourceTree = "<group>"; };
+		17C0BAAB1E7719D50013EDBF /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		17EB75021E71CEE80052CA93 /* memoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				17B087A51E6DC26F0007F568 /* AppDelegate.swift */,
+				17C0BAA71E7719B40013EDBF /* CustomOverlayViewController.swift */,
+				17C0BAA81E7719B40013EDBF /* CustomOverlayViewController.xib */,
+				17C0BAAB1E7719D50013EDBF /* CustomOverlayView.swift */,
 				17C0BAA31E7703FD0013EDBF /* ViewController.swift */,
 				17B087A91E6DC26F0007F568 /* Main.storyboard */,
 				17B087AC1E6DC26F0007F568 /* Assets.xcassets */,
@@ -127,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C0BAAA1E7719B40013EDBF /* CustomOverlayViewController.xib in Resources */,
 				17B087B01E6DC26F0007F568 /* LaunchScreen.storyboard in Resources */,
 				17B087AD1E6DC26F0007F568 /* Assets.xcassets in Resources */,
 				17B087AB1E6DC26F0007F568 /* Main.storyboard in Resources */,
@@ -140,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C0BAA91E7719B40013EDBF /* CustomOverlayViewController.swift in Sources */,
 				17C0BAA51E7703FD0013EDBF /* ViewController.swift in Sources */,
 				17B087A61E6DC26F0007F568 /* AppDelegate.swift in Sources */,
+				17C0BAAC1E7719D50013EDBF /* CustomOverlayView.swift in Sources */,
 				17EB75031E71CEE80052CA93 /* memoryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
