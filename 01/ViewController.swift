@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, CustomOverlayDelegate{
 
     @IBOutlet weak var pickedImage: UIImageView!
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             imagePicker.cameraCaptureMode = .photo
             imagePicker.modalPresentationStyle = .fullScreen
             
-            imagePicker.showsCameraControls = true;
+            imagePicker.showsCameraControls = false;
             
             
             //custom view stuff
@@ -50,6 +50,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             )
             let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
             customView.frame = imagePicker.view.frame
+            
+        
             
             //present overlay camera
             //buttons from image picker do not work with custom overlay view, require custom actions
@@ -67,10 +69,24 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 
                 imagePicker.cameraViewTransform = CGAffineTransform(translationX: 0, y: (screenSize.height - cameraHeight) / 2.0)
                 imagePicker.cameraViewTransform = imagePicker.cameraViewTransform.scaledBy(x: scale, y: scale)
+                
+                imagePicker.cameraOverlayView = customView
             })
             
             //start Timer
             StartTime()
+            
+            
+            //Custom Overlay Actions
+            func didCancel(overlayView:CustomOverlayView) {
+                imagePicker.dismiss(animated: true,completion: nil)
+                print("dismissed!!")
+            }
+            func didShoot(overlayView:CustomOverlayView) {
+                imagePicker.takePicture()
+                overlayView.cameraLabel.text = "Shot Photo"
+                imagePicker.dismiss(animated: true,completion: nil)
+            }
         }
     }
     
@@ -136,6 +152,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         timerArray.append(count)
         print(timerArray)
     }
+    
     
     
     

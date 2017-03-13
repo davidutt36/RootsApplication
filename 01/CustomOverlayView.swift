@@ -8,14 +8,24 @@
 
 import UIKit
 
+protocol CustomOverlayDelegate{
+    func didCancel(overlayView:CustomOverlayView)
+    func didShoot(overlayView:CustomOverlayView)
+}
+
 class CustomOverlayView: UIView {
+    
+    var delegate: CustomOverlayDelegate! = nil
+    @IBOutlet weak var cameraLabel: UILabel!
+    
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBAction func shootButton(_ sender: Any) {
+        cameraLabel.text = "Even Cooler Camera"
+        delegate.didShoot(overlayView: self)
     }
-    */
-
+    
+    @IBAction func cancelButton(_ sender: UIButton) {
+        cameraLabel.text = "I want to exit"
+        delegate.didCancel(overlayView: self)
+    }
 }
