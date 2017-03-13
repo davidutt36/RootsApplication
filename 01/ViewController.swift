@@ -17,6 +17,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var time: Double = 0
     var count = ""
     
+    //needs to save as interval to control blur delay
+//    var countValue =
+    
     var timerArray = [String]()
     
     
@@ -37,6 +40,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             imagePicker.cameraCaptureMode = .photo
             imagePicker.modalPresentationStyle = .fullScreen
             
+            imagePicker.showsCameraControls = true;
+            
             
             //custom view stuff
             let customViewController = CustomOverlayViewController(
@@ -46,14 +51,23 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             let customView:CustomOverlayView = customViewController.view as! CustomOverlayView
             customView.frame = imagePicker.view.frame
             
-            //present the camera
-            self.present(imagePicker, animated: true, completion: {imagePicker.cameraOverlayView = customView})
+            //present overlay camera
+            //buttons from image picker do not work with custom overlay view, require custom actions
+//            self.present(imagePicker, animated: true, completion: {imagePicker.cameraOverlayView = customView})
+
+            //present simple orginal camera
+//            self.present(imagePicker, animated: true, completion: nil)
             
-//            present(imagePicker,animated: true, completion: {
-//                imagePicker.cameraOverlayView = customView
-//                }
-//            )
-            
+            //present camera will full view screen
+            self.present(imagePicker, animated: true, completion: {
+                let screenSize = UIScreen.main.bounds.size
+                let ratio: CGFloat = 4.0 / 3.0
+                let cameraHeight: CGFloat = screenSize.width * ratio
+                let scale: CGFloat = screenSize.height / cameraHeight
+                
+                imagePicker.cameraViewTransform = CGAffineTransform(translationX: 0, y: (screenSize.height - cameraHeight) / 2.0)
+                imagePicker.cameraViewTransform = imagePicker.cameraViewTransform.scaledBy(x: scale, y: scale)
+            })
             
             //start Timer
             StartTime()
