@@ -19,43 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-5c-Skv">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHs-eJ-O1V">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="E8c-FC-M8O">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="a2d-Il-aX7">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Current Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-qk-lTY">
-                                <rect key="frame" x="40" y="161" width="240.5" height="33.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.99048737050000002" green="0.99048737050000002" blue="0.99048737050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                     </view>
                     <blurEffect style="light"/>
                 </visualEffectView>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YmQ-no-ytz">
-                    <rect key="frame" x="40" y="324" width="241" height="50"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zq6-mq-46q">
-                            <rect key="frame" x="0.0" y="0.0" width="241" height="50"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X67-4G-DPc">
-                                    <rect key="frame" x="0.0" y="0.0" width="241" height="50"/>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-0W-YBy">
                     <rect key="frame" x="39" y="495" width="41" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Shoot"/>
                     <connections>
-                        <action selector="shootButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="TCP-CB-8NS"/>
+                        <action selector="shootButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="spd-UH-fjr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyC-va-JEG">
@@ -63,25 +41,21 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Cancel"/>
                     <connections>
-                        <action selector="cancelButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="eqm-p5-Dis"/>
+                        <action selector="cancelButton:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="teK-5U-RY4"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Current Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-qk-lTY">
+                    <rect key="frame" x="39" y="267" width="240.5" height="33.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <constraints>
-                <constraint firstItem="YmQ-no-ytz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W8t-FQ-DkS"/>
-                <constraint firstItem="YmQ-no-ytz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="324" id="zk3-4X-Zec"/>
-            </constraints>
             <connections>
                 <outlet property="cameraLabel" destination="VvK-qk-lTY" id="Jeh-YC-5m9"/>
             </connections>
             <point key="canvasLocation" x="33" y="54"/>
         </view>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Current Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TgV-rZ-PHi">
-            <rect key="frame" x="0.0" y="0.0" width="240.5" height="33.5"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-            <nil key="highlightedColor"/>
-        </label>
     </objects>
 </document>

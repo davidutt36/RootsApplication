@@ -15,7 +15,6 @@
 		17C0BAA91E7719B40013EDBF /* CustomOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BAA71E7719B40013EDBF /* CustomOverlayViewController.swift */; };
 		17C0BAAA1E7719B40013EDBF /* CustomOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C0BAA81E7719B40013EDBF /* CustomOverlayViewController.xib */; };
 		17C0BAAC1E7719D50013EDBF /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BAAB1E7719D50013EDBF /* CustomOverlayView.swift */; };
-		17EB75031E71CEE80052CA93 /* memoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB75021E71CEE80052CA93 /* memoryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		17C0BAA71E7719B40013EDBF /* CustomOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayViewController.swift; sourceTree = "<group>"; };
 		17C0BAA81E7719B40013EDBF /* CustomOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayViewController.xib; sourceTree = "<group>"; };
 		17C0BAAB1E7719D50013EDBF /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
-		17EB75021E71CEE80052CA93 /* memoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +44,6 @@
 		17B087991E6DC26F0007F568 = {
 			isa = PBXGroup;
 			children = (
-				17EB75021E71CEE80052CA93 /* memoryData.swift */,
 				17B087A41E6DC26F0007F568 /* 01 */,
 				17B087A31E6DC26F0007F568 /* Products */,
 			);
@@ -154,7 +151,6 @@
 				17C0BAA51E7703FD0013EDBF /* ViewController.swift in Sources */,
 				17B087A61E6DC26F0007F568 /* AppDelegate.swift in Sources */,
 				17C0BAAC1E7719D50013EDBF /* CustomOverlayView.swift in Sources */,
-				17EB75031E71CEE80052CA93 /* memoryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +274,7 @@
 				DEVELOPMENT_TEAM = 7VHUM42SU7;
 				INFOPLIST_FILE = 01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Parsons.-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "-01010";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -291,7 +287,7 @@
 				DEVELOPMENT_TEAM = 7VHUM42SU7;
 				INFOPLIST_FILE = 01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Parsons.-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "-01010";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
